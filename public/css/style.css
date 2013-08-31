@@ -1,0 +1,269 @@
+
+/* Basic setup */
+
+
+/* Makeshift css Reset*/
+{
+	margin: 0;
+	padding: 0;
+}
+
+/* Tell the browser to render HTML 5 elements as block */
+	article, section, aside, hgroup, nav, header, footer, figure, figcaption { 
+	display: block;
+}
+
+body{
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	font-size: 20px;
+	background-color:#341900;
+	color:#000000;
+}
+
+#body1{
+	width: 100%;
+	height: 200px;
+	padding-top:10px;
+}
+
+.header{
+	margin: 0 165px 5px 5px;
+	height: 147px;
+}
+
+header{
+	
+	margin:0 30px;
+}
+
+.header_left{
+	float:left;
+	width: 350px;
+	
+}
+
+#logo{
+	background:url(../images/logo2.gif) no-repeat 0 0;
+	border-bottom:2px solid #fff;
+	float:left;
+	width: 300px;
+z-index:-1;
+
+padding-bottom: 145px; 
+}
+
+h1{
+	font-weight:bold;
+	color:#fff;
+	font-size:50px;
+	position: absolute;
+	padding-top:60px;
+	padding-left: 10px;
+}
+
+/******------------------ Search -----------****/
+#search{
+	padding-left: 450px;
+	position:absolute;
+	top: 125px;
+}
+
+ form input[type=search], form input[type=submit] {
+	padding: 0;
+}
+
+ .search
+{
+background: url(../images/5.png) no-repeat 0 0 ;
+width:320px;
+height:32px;
+padding-left: 10px;
+
+}
+.text
+{
+background:transparent;
+width:270px;
+height:20px;
+border:0px;
+outline:0px;
+padding:0px;
+font-size:15px;
+border-radius:18px 0 0 20px;
+-webkit-border-radius: 18px 0 0 20px;
+-moz-border-radius: 18px 0 0 20px;
+-o-border-radius: 18px 0 0 20px;
+position:absolute;
+top:5px;
+}
+.submit
+{
+background:transparent;
+border:0px;
+height:20px;
+cursor: pointer;
+border-radius: 100%;
+}
+
+
+.header_right{
+	float:right;
+	padding-top: 26px;
+}
+
+
+#body2{
+	width: 100%;
+	height: 600px;
+
+}
+.colL{
+	border 2px solid #fff;
+	float: left;
+	width: 200px;
+	height:600px;
+	display: inline-block;
+	padding: 0px 10px 10px 0px;
+}
+
+/*********************** Menu *********************/
+
+#menu li {
+	list-style:none;
+	height:39px;
+	padding:2px;
+	width:40px;
+	
+}
+
+
+#menu span{
+	/* Container properties */
+	width:0;
+	left:38px;
+	padding:0;
+	position:absolute;
+	overflow:hidden;
+
+	/* Text properties */
+	font-family:'Myriad Pro',Arial, Helvetica, sans-serif;
+	font-size:18px;
+	font-weight:bold;
+	letter-spacing:0.6px;
+	white-space:nowrap;
+	line-height:39px;
+	
+	/* CSS3 Transition: */
+	-webkit-transition: 0.25s;
+	
+	/* Future proofing (these do not work yet): */
+	-moz-transition: 0.25s;
+	transition: 0.25s;
+}
+
+
+#menu li a{
+	height:39px;
+	width:38px;
+	display:block;
+	position:relative;
+	color:#e5c69c;
+
+}
+
+#menu li a:hover{
+	text-decoration:none;
+	
+	/* CSS outer glow with the box-shadow property */
+	-moz-box-shadow:0 0 5px #9ddff5;
+	-webkit-box-shadow:0 0 5px #9ddff5;
+	box-shadow:0 0 5px #9ddff5;
+}
+
+
+#menu li a:hover span{
+width:auto; 
+padding:0 20px;
+overflow:visible; 
+
+}
+
+
+#menu_active span{
+	color:#d90000;
+	overflow: visible;
+	text-shadow:.8px 1px #fff;
+}
+
+#menu li:nth-of-type(1){
+	background: url(../images/home.gif) no-repeat;
+}
+
+#menu li:nth-of-type(2){
+	background: url(../images/i.jpg) no-repeat;
+}
+
+#menu li:nth-of-type(3){
+	background: url(../images/m.jpg) no-repeat; 
+}
+
+#menu li:nth-of-type(4){
+	background: url(../images/file.jpg) no-repeat;
+}
+
+
+#menu li:nth-of-type(5){
+	background: url(../images/mail.jpg) no-repeat;
+}
+
+
+
+
+.main{
+	border: 2px solid #fff;
+	width:985px;
+	height:600px;
+	display: inline-block;
+	background: url(../images/BCK.gif)
+	
+}
+
+.colR{
+	margin-right:50px;
+	border:2px solid #fff;
+	float: right;
+	width: 300px;
+	display: inline-block;
+}
+
+#body3{
+	padding-top:600px;
+	height: 300px;
+	position:relative;
+}
+
+footer{
+	height: 200px;
+	background: #000;
+	color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
