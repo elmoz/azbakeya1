@@ -1,4 +1,8 @@
 Azbakeya1::Application.routes.draw do
+  root 'library#index'
+  get "library" => 'library#index'
+  resources :books
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -54,3 +58,4 @@ Azbakeya1::Application.routes.draw do
   #     resources :products
   #   end
 end
+

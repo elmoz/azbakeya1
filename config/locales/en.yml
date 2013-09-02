@@ -21,3 +21,9 @@
 
 en:
   hello: "Hello world"
+  book_title: "Title"
+  book_desc: "Description"
+  book_image: "Image"
+  book_isbn: "ISBN"
+  Listing books: "Listing Books"
+  

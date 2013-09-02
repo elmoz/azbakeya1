@@ -1,0 +1,7 @@
+<!-- <h2><%= t :book_library %></h2> -->
+<% for book in @books -%>
+<div class="entry">
+	<%= image_tag(book.image_url) %> <h3><%=h h book.title %></h3>
+	<%= book.description %>
+</div>
+<% end %>

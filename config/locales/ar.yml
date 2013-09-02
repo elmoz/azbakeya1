@@ -1,0 +1,12 @@
+ar:
+  hello: "صباح الخير"
+  book_title: "عنوان الكتاب"
+  book_desc: "ملخص الكتاب"
+  book_image: "صوره"
+  book_isbn: "الرقم القومي"
+  listing_books: "معرض الكتب"
+  azbakeya_title: "سور الازبكيه"
+  menu_books: "كتب"
+  menu_children_books: "كتب اطفال"
+  menu_nook_books: "كتب نوك"
+  menu_audio_books: "كتب صوت"
