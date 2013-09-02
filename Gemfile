@@ -46,3 +46,7 @@ end
 
 #Use authlogic
 gem 'authlogic'
+
+#Use ActiveRecord Sessions
+gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
+
