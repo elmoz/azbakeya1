@@ -97,7 +97,7 @@ body{
 	      right: 0;
 	       }
      
-#footer{ 
+#footer_popup{ 
 	position: fixed;
 	 bottom: 0;
 	  background: #fff;
@@ -106,7 +106,7 @@ body{
 	     text-align: center;
 	      }
 	      
-#footer div{ 
+#footer_popup div{ 
 	padding: 5px;
 	 }
 
