@@ -1,7 +1,27 @@
-<!-- <h2><%= t :book_library %></h2> -->
-<% for book in @books -%>
-<div class="entry">
-	<%= image_tag(book.image_url) %> <h3><%=h h book.title %></h3>
-	<%= book.description %>
+
+<div id="columns">
+	<div id="center_column" class="center_column">
+		<div id="featured-products_block_center">
+			<div class="block_content">
+				<ul>
+					<% for book in @books -%>
+					<li class="ajax_block_product">
+						<%= image_tag(book.image_url, :class => "product_image") %>
+						<div>
+							<h5><a class="proudct_link" href="#" title="<%= h h book.title %>"><%= h h book.title %></a></h5>
+							<p>
+								<a class="proudct_descr" href="#" tabindex="More"> <%=h truncate( book.description.gsub(/<.*?>/,''), :length => 50) %> </a>
+							
+							</p>
+							<span class="read">..</span>
+							<a class="excluive ajax_add_to_cart_button" rel="#" title="Add to mybooks">Add to mybooks</a>
+						</div>
+					</li>
+					<% end %>
+				</ul>
+				<div class="clearblock"></div>
+			</div>
+		</div>
+	</div>
+	<div class="clearblock"></div>
 </div>
-<% end %>
