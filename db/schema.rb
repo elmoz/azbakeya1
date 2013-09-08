@@ -11,15 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130904021808) do
+ActiveRecord::Schema.define(version: 20130908180431) do
 
   create_table "books", force: true do |t|
     t.string   "title"
-    t.text     "description", limit: 255
+    t.text     "description",         limit: 255
     t.string   "image_url"
     t.string   "isbn"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "publisher"
+    t.string   "author"
+    t.string   "publisher_image_url"
+    t.string   "pages"
+    t.date     "release_date"
+    t.string   "image_large_url"
+    t.decimal  "price"
   end
 
   create_table "sessions", force: true do |t|
