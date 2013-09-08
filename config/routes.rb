@@ -1,7 +1,12 @@
 Azbakeya1::Application.routes.draw do
+  
+  resources :user_sessions
+  resources :users
   root 'library#index'
   get "library" => 'library#index'
   get "library/product" => 'library#product'
+  get "login" => 'user_sessions#new'
+  get "logout" => 'user_sessions#destroy'
   resources :books
 
   # The priority is based upon order of creation: first created -> highest priority.

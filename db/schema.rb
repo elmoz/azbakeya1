@@ -11,13 +11,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130902002259) do
+ActiveRecord::Schema.define(version: 20130908180431) do
 
   create_table "books", force: true do |t|
     t.string   "title"
-    t.text     "description", limit: 255
+    t.text     "description",         limit: 255
     t.string   "image_url"
     t.string   "isbn"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "publisher"
+    t.string   "author"
+    t.string   "publisher_image_url"
+    t.string   "pages"
+    t.date     "release_date"
+    t.string   "image_large_url"
+    t.decimal  "price"
+  end
+
+  create_table "sessions", force: true do |t|
+    t.string   "session_id", null: false
+    t.text     "data"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "sessions", ["session_id"], name: "index_sessions_on_session_id", unique: true
+  add_index "sessions", ["updated_at"], name: "index_sessions_on_updated_at"
+
+  create_table "user_sessions", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "username"
+    t.string   "email"
+    t.string   "crypted_password"
+    t.string   "password_salt"
+    t.string   "persistence_token"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

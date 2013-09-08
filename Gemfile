@@ -46,3 +46,11 @@ end
 
 #Use authlogic
 gem 'authlogic'
+
+gem 'nokogiri'
+
+# gem 'open-uri'
+
+#Use ActiveRecord Sessions
+gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
+
