@@ -3,18 +3,18 @@
 <html>
 	<head>
 		<title><%= t :azbakeya_title%></title>
-		<%= stylesheet_link_tag  "style", "arabic-font", "loginpop", :media => "all" %>
-		<%= javascript_include_tag "jquery.min", "general", "hoverIntent", "superfish" => true %>
+		<%= stylesheet_link_tag  "layout", "arabic-font", "loginpop", "productpg", :media => "all" %>
+		<%= javascript_include_tag "jquery.min", "general", "hoverIntent", "superfish","flowslider.jquery", "jquery-1.7.1.min" => true %>
 
 	</head>
-	<body id="index">
+	<body>
 		<div id="wrapper1">
 			<div id="wrapper2">
 				<div id="wrapper3">
 					<div id="wrapper4">
 						<div id="header" >
 							<div id="header_logo">
-								<a  href="#" title=" BOOKS SHELF" > <img class="logo" src="img/logo.png" alt="BOOKS SHELF" /> </a>
+								<a  href="#" title=" BOOKS SHELF" > <img class="logo" src="/img/logo.png" alt="BOOKS SHELF" /> </a>
 							</div>
 							<div id="header_right">
 								<ul id="tmheaderlinks">
@@ -114,7 +114,9 @@
 								</div>
 							</div>
 						</div>
-						<div id="columns">
+						<!-- colomn>  <-->
+				
+						<div>
 							<%= yield :layout %>
 						</div>
 					</div>
@@ -163,8 +165,8 @@
 								</p>
 							</div>
 							<div id="tmsocial">
-								<a class="banner1" href="http://twitter.com"> <img src="img/slide_00.png" alt="" title="twiiter" /> </a>
-								<a class="banner1" href="http://facbook.com"> <img src="img/slide_01.png" alt="" title="facebook" /> </a>
+								<a class="banner1" href="http://twitter.com"> <img src="/img/slide_00.png" alt="" title="twiiter" /> </a>
+								<a class="banner1" href="http://facbook.com"> <img src="/img/slide_01.png" alt="" title="facebook" /> </a>
 							</div>
 						</div>
 					</div>
