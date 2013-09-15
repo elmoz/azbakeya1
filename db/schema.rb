@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130908180431) do
+ActiveRecord::Schema.define(version: 20130915221941) do
 
   create_table "books", force: true do |t|
     t.string   "title"
@@ -38,6 +38,12 @@ ActiveRecord::Schema.define(version: 20130908180431) do
 
   add_index "sessions", ["session_id"], name: "index_sessions_on_session_id", unique: true
   add_index "sessions", ["updated_at"], name: "index_sessions_on_updated_at"
+
+  create_table "shelves", force: true do |t|
+    t.string   "label"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "user_sessions", force: true do |t|
     t.datetime "created_at"
