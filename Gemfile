@@ -45,12 +45,14 @@ end
 # gem 'debugger', group: [:development, :test]
 
 #Use authlogic
-gem 'authlogic'
+#gem 'authlogic'
 
 gem 'nokogiri'
 
 # gem 'open-uri'
 
 #Use ActiveRecord Sessions
-gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
+#gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
+
+gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
 

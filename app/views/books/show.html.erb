@@ -20,5 +20,5 @@
   <%= @book.isbn %>
 </p>
 
-<%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to 'Back', books_path %>
+<%= link_to 'Edit', edit_shelf_book_path(@shelf, @book) %> |
+<%= link_to 'Back', shelf_books_path(@shelf) %>

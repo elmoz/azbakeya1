@@ -1,4 +1,5 @@
 class BooksController < ApplicationController
+  before_action :set_shelf
   before_action :set_book, only: [:show, :edit, :update, :destroy]
 
   # GET /books
@@ -11,6 +12,7 @@ class BooksController < ApplicationController
   # GET /books/1.json
   def show
   end
+  
 
   # GET /books/new
   def new
@@ -24,11 +26,12 @@ class BooksController < ApplicationController
   # POST /books
   # POST /books.json
   def create
-    @book = Book.new(book_params)
+    @book = Book.create(book_params)
 
     respond_to do |format|
       if @book.save
-        format.html { redirect_to @book, notice: 'Book was successfully created.' }
+        @shelf.books << @book
+        format.html { redirect_to [@shelf,@book], notice: 'Book was successfully created.' }
         format.json { render action: 'show', status: :created, location: @book }
       else
         format.html { render action: 'new' }
@@ -37,12 +40,13 @@ class BooksController < ApplicationController
     end
   end
 
-  # PATCH/PUT /books/1
+  # PATCH/PUT /books/1require 'shelves_controller'
+  
   # PATCH/PUT /books/1.json
   def update
     respond_to do |format|
       if @book.update(book_params)
-        format.html { redirect_to @book, notice: 'Book was successfully updated.' }
+        format.html { redirect_to [@shelf,@book], notice: 'Book was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -56,7 +60,7 @@ class BooksController < ApplicationController
   def destroy
     @book.destroy
     respond_to do |format|
-      format.html { redirect_to books_url }
+      format.html { redirect_to shelf_books_url }
       format.json { head :no_content }
     end
   end
@@ -65,6 +69,11 @@ class BooksController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_book
       @book = Book.find(params[:id])
+    end
+    
+     #Use callbacks to share common setup or constraints between actions.
+    def set_shelf
+      @shelf = Shelf.find(params[:shelf_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

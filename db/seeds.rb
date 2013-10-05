@@ -44,7 +44,7 @@ Book.create(:title => "عبقرية عمر مجلد" , :description => %{
 }, :image_url =>"", :isbn =>"977-14-2106-9")
 =end
 
-33.upto(100) do |x|
+33.upto(66) do |x|
 
   begin
   # Get a Nokogiri::HTML::Document for the page we’re interested in...

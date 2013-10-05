@@ -3,30 +3,177 @@
 <html>
 	<head>
 		<title><%= t :azbakeya_title%></title>
-		<%= stylesheet_link_tag "library", "scaffolds", :media => "all" %>
-	</head>
-	<body id="store">
-		<div id="banner">
-			<%= t @page_title || :azbakeya_title %>
+		<%= stylesheet_link_tag  "layout", "arabic-font", "loginpop", "productpg", :media => "all" %>
+		<%= javascript_include_tag "jquery.min", "general", "hoverIntent", "superfish","flowslider.jquery", "jquery-1.7.1.min" => true %>
 
-		</div>
-		<div id="columns">
-			<div id="side">
-				<a href="http://www...."><%= t :menu_books %></a>
-				<br />
-				<a href="http://www..../faq"><%= t :menu_children_books %></a>
-				<br />
-				<a href="http://www..../news"><%= t :menu_nook_books %></a>
-				<br />
-				<a href="http://www..../contact">
-				<Contact>
-					<% t= :menu_audio_books %>
-				</a>
-				<br />
+	</head>
+	<body>
+		<div id="wrapper1">
+			<div id="wrapper2">
+				<div id="wrapper3">
+					<div id="wrapper4">
+						<div id="header" >
+							<div id="header_logo">
+								<a  href="#" title=" BOOKS SHELF" > <img class="logo" src="/img/logo.png" alt="BOOKS SHELF" /> </a>
+							</div>
+							<div id="header_right">
+								<ul id="tmheaderlinks">
+									<li>
+										<a href="#" class="active">الصفحه الرئيسيه</a>
+									</li>
+									<li>
+										<a href="#">خوصوصيات</a>
+									</li>
+									<li>
+										<a href="#">شرح الموقع</a>
+									</li>
+									<li>
+										<a href="#">التواصل</a>
+									</li>
+								</ul>
+								<div id="languages_block_top">
+									<ul id="first-languges">
+										<li class="selected_language">
+											ar
+										</li>
+										<li>
+											<a href="#" title="English"> en </a>
+										</li>
+									</ul>
+								</div>
+								<ul id="header_user">
+									<li id="header_user_info">
+										(اهلاً بك)
+									</li>
+									<li>
+										<div class="ar login_popup">
+											<a class="button" href="#" >دخول</a>
+											<div class="popup">
+												<a href="#" class="close">غلق</a>
+												<form>
+													<P>
+														<span class="title">اسم الدخول</span>
+														<input name="" type="text" />
+													</P>
+													<P>
+														<span class="title">كلمه السر</span>
+														<input name="" type="password" />
+													</P>
+													<P>
+														<input name="" type="button" value="Login" />
+													</P>
+												</form>
+											</div>
+										</div>
+									</li>
+									<li id="your_account">
+										<a href="#">حسابي</a>
+									</li>
+								</ul>
+								<div class="clearblock"></div>
+								<div class="clearblock"></div>
+								<div id="search_block_top">
+									<form method="get" action="#" id="searchbox">
+										<input class="search_query" type="text" id="search_query_top" name="search_query" value="Title/ Author/ ISBN" />
+										<a href="javascript:document.getElementById('searchbox').submit();">go!</a>
+										<input type="hidden" name="orderway" value="desc" />
+									</form>
+								</div>
+								<div class="clearblock"></div>
+								<div id="tmcategories">
+									<ul id="cat" class="sf-menu sf-js-enabled">
+										<li class="current">
+											<a href="#">كتب</a>
+											<ul class="subcat">
+												<li >
+													<a href="#">رسم & تصوير</a>
+												</li>
+												<li>
+													<a href="#">كتب سمعيه</a>
+												</li>
+												<li >
+													<a href="#">كتب الكتونيه</a>
+												</li>
+
+											</ul>
+										</li>
+										<li >
+											<a href="#">كتب اطفال</a>
+										</li>
+										<li>
+											<a href="#">كتب نوك</a>
+										</li>
+										<li>
+											<a href="#">كتب سمعيه</a>
+										</li>
+										<li class="last">
+											<a href="#">مجالات</a>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- colomn>  <-->
+				
+						<div>
+							<%= yield :layout %>
+						</div>
+					</div>
+					<div id="footer_wrapper" >
+						<div id="footer">
+							<div id="tmfooterlinks">
+								<div>
+									<h4>Information</h4>
+									<ul>
+										<li>
+											<a href="#">Contact</a>
+										</li>
+										<li>
+											<a href="#">Delivery</a>
+										</li>
+										<li>
+											<a href="#">Terms and conditions</a>
+										</li>
+										<li>
+											<a href="#">About us</a>
+										</li>
+									</ul>
+								</div>
+								<div>
+									<h4>Your Account</h4>
+									<ul>
+										<li>
+											<a href="#">Your Account</a>
+										</li>
+										<li>
+											<a href="#">Personal information</a>
+										</li>
+										<li>
+											<a href="#">Addresses</a>
+										</li>
+										<li>
+											<a href="#">Discount</a>
+										</li>
+										<li>
+											<a href="#">Odrer history</a>
+										</li>
+									</ul>
+								</div>
+								<p>
+									&copy; Copyright  by <a href="#">elmos</a>
+								</p>
+							</div>
+							<div id="tmsocial">
+								<a class="banner1" href="http://twitter.com"> <img src="/img/slide_00.png" alt="" title="twiiter" /> </a>
+								<a class="banner1" href="http://facbook.com"> <img src="/img/slide_01.png" alt="" title="facebook" /> </a>
+							</div>
+						</div>
+					</div>
+
+				</div>
 			</div>
-			<div id="main">
-				<%= yield :layout %>
-			</div>
 		</div>
+
 	</body>
 </html>

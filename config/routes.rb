@@ -1,7 +1,10 @@
 Azbakeya1::Application.routes.draw do
   
-  get "library" => 'library#index'
-  resources :books
+  resources :shelves do
+    resources :books
+  end
+  
+  
   root 'library#index'
   
   # The priority is based upon order of creation: first created -> highest priority.
