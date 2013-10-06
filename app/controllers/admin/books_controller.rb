@@ -1,6 +1,7 @@
-class BooksController < ApplicationController
+class Admin::BooksController < ApplicationController
   before_action :set_shelf
   before_action :set_book, only: [:show, :edit, :update, :destroy]
+  layout "admin"
 
   # GET /books
   # GET /books.json
@@ -60,7 +61,7 @@ class BooksController < ApplicationController
   def destroy
     @book.destroy
     respond_to do |format|
-      format.html { redirect_to shelf_books_url }
+      format.html { redirect_to admin_shelf_books_url }
       format.json { head :no_content }
     end
   end

@@ -1,6 +1,6 @@
-class ShelvesController < ApplicationController
+class Admin::ShelvesController < ApplicationController
   before_action :set_shelf, only: [:show, :edit, :update, :destroy]
-
+  layout "admin"
   # GET /shelves
   # GET /shelves.json
   def index
@@ -56,7 +56,7 @@ class ShelvesController < ApplicationController
   def destroy
     @shelf.destroy
     respond_to do |format|
-      format.html { redirect_to shelves_url }
+      format.html { redirect_to admin_shelves_url }
       format.json { head :no_content }
     end
   end

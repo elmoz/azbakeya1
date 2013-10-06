@@ -1,8 +1,15 @@
 Azbakeya1::Application.routes.draw do
   
-  resources :shelves do
-    resources :books
+  get "admin/seach"
+  get "admin" => "admin#index"
+ 
+ namespace :admin do
+    resources :shelves do
+      resources :books
+    end
   end
+
+  
   
   
   root 'library#index'
