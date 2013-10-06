@@ -26,6 +26,9 @@ body{
 	 clear: both;
 	 }
 	 
+	 a{
+	 	color: #fff;
+	 }
 /*a{ 
 	text-decoration: none;
 	 color: #666;
@@ -52,28 +55,28 @@ body{
 	   text-transform: none;
 	   }
 */
-.popup form{
+.popup_login form{
 	font-family:"Courier New";
 	 background: #e5c69c;
 	  padding: 10px;
 	  color:#3d1b0f;
 	   }
 	   
-.popup form p{
+.popup_login form p{
 	 padding: 5px 0;
 	 }
-.popup form .title{
+.popup_login form .title{
 	 min-width: 100px;
 	  display: inline-block; 
 	  }
 	  
-.popup form input[type=text], .popup form input[type=password]{ 
+.popup_login form input[type=text], .popup_login form input[type=password]{ 
 	border: 1px solid #fff;
 	 padding: 5px;
 	 }
 	 
 
-.popup  .button{
+ .popup_login   .button_login {
 	 display: inline-block; 
 	 background: #000; 
 	 padding:5px 10px; 
@@ -89,8 +92,7 @@ body{
 	     width: 100%; 
 	     height: 100%; 
 	     }
-
-.popup{
+.popup_login{
 	 padding: 10px 10px 35px;
 	  background: #fff;
 	   z-index: 999;
@@ -99,7 +101,7 @@ body{
 	      right: 0;
 	       }
      
-#footer_popup{ 
+#footer_popup_login{ 
 	position: fixed;
 	 bottom: 0;
 	  background: #fff;
@@ -108,11 +110,11 @@ body{
 	     text-align: center;
 	      }
 	      
-#footer_popup div{ 
+#footer_popup_login div{ 
 	padding: 5px;
 	 }
 
-.close{
+.close_login{
 	 font-weight: bold; 
 	 color: #3d1b0f; 
 	 float: right;

@@ -1,12 +1,21 @@
 // JavaScript by TeckStack.com
 
 $(document).ready(function() {
-    $(".button").click(function(e) {
+    $(".button_login").click(function(e) {
         $("body").append('<div class="overlay"></div>');
-		$(".popup").show();
+		$(".popup_login").show();
 		
-		$(".close").click(function(e) {
-			$(".popup, .overlay").hide();
+		$(".close_login").click(function(e) {
+			$(".popup_login, .overlay").hide();
 		});
     });
 });
+
+
+function openPopup() {
+    document.getElementById('test').style.display = 'block';
+}
+
+function closePopup() {
+    document.getElementById('test').style.display = 'none';
+}

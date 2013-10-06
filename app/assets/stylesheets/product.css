@@ -32,8 +32,9 @@ padding: 0 40px 0 40px;
 	}
 	
 	#primary_block ul#usefull_link_block li{
-		padding: 7px 0 0 10px;
-		background: url(/img/bullet_alt.gif) 0 7px no-repeat;
+		padding: 7px 40px 0 10px;
+		background: url(/img/bullet_alt.gif) 233px 13px no-repeat;
+	
 
 	}
 
@@ -51,9 +52,9 @@ padding: 0 40px 0 40px;
 }
 
 #primary_block #pb-left-column{
-	width: 315px;
+	width: 400px;
 	float: right;
-	padding: 0 0 0 20px;
+	padding: 0 20px 0 20px;
 }
 
 /*** short description **/
@@ -73,30 +74,52 @@ padding: 0 40px 0 40px;
 
 
 /***** buttons****/
-#primary_block p.buttons_bottom_block{
-	padding: 0;
+#primary_block p.buttons_bottom_block a{
+	background-color:#CF6B50;
+	border:1px solid #aa563f;
+	color:#DDDDDD;
+	float: right;
+	font-weight:bold;
+	font-size: 16px;
+	text-align: center;
+	height: 30px;
+	width: 150px;
+	margin: 10px;
+	padding:10px;
 }
 
-#primary_block p.buttons_bottom_block a{
-	margin: 17px 0 0 0 ;
-	
+
+#primary_block p.buttons_bottom_block a:hover{
+	background-color:#c4654b;
+	border:1px solid #aa563f;
+	color:#DDDDDD;
+	font-weight:bold;
+	text-align: center;
+	margin: 10px;
+	padding:10px;
+	font-size: 16px;
+	height: 30px;
+	width: 150px;
 }
 
 
 /**taps****/
+#more_info_block{
+	float:right;
+	padding: 0 20px 20px 0
+}
 
-ul .idTabs{
-	height: 25px;
+
+ #more_info_tabs.idTabs{
 	padding: 30px 0 0 0;
 	clear: both;
+	height: 17px;
+
+
 }
 
-ul .idTabs li{
-	float: right;
-}
-
-ul .idTabs li a{
-	height:20px;
+#more_info_tabs.idTabs li a{
+	height:30px;
 	display: block;
 	padding: 5px 15px 0 15px;
 	font: 11px;
@@ -104,18 +127,20 @@ ul .idTabs li a{
 	text-decoration: none;
 	text-transform: uppercase;
 	cursor: pointer;
+	float: right;
 }
 
-ul .idTabs li a .selected{
+ #more_info_tabs.idTabs li a.selected{
 	background:#EEEEEE;
 	color: #000000;
+	
 }
 
 /* tabs short */
-ul.idTabsShort li a {
+.idTabsShort li a {
 	
 }
-ul.idTabsShort li a.selected {
+.idTabsShort li a.selected {
 	
 }
 
@@ -131,6 +156,10 @@ div #more_info_sheets{
 	
 }
 
+#more_info_sheets #idTab1 {
+	width:770px;
+	}
+
 
 /******* idTab1 (product description) *****/
 div #idTab1{
@@ -144,7 +173,7 @@ div #idTab1 p{
 /****idtab2 (data sheet)****/
 ul #idTab2 li{
 	padding: 3px 0 3px 10px;
-	background: (/img/bullet_alt.gif) 0 7px no-repeat;
+	background: (../img/bullet_alt.gif) 0 7px no-repeat;
 }
 
 ul #idTab2 li span{

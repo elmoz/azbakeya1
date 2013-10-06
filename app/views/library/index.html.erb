@@ -1,94 +1,130 @@
-<<<<<<< HEAD
 <div id="index">
-<div id="columns" >
-	<div id="center_column" class="body_columns">
-		
-		<div id="col1">
-			<div id="center_tag">
-				<img src="/img/center-tag.jpg" />
-	<a href="#">			<h4> featured product </h4> </a>
+	<div id="columns" >
+		<div id="center_column" class="body_columns">
+
+			<div id="col1">
+				<div id="center_tag">
+					<img src="/img/center-tag.jpg" />
+					<a href="#"> <h4> featured product </h4> </a>
+				</div>
+				<div id="featured-products_block_center">
+					<div class="block_content">
+						<ul>
+							<% for book in @books [0..3]-%>
+							<li class="ajax_block_product">
+								<%= image_tag(book.image_url, :class => "product_image") %>
+								<div>
+									<h5><a class="proudct_link" href="http://localhost:3000/library/product" title="<%= h h book.title %>"><%= h h book.title %></a></h5>
+									<p>
+										<a class="proudct_descr" href="http://localhost:3000/library/product" tabindex="More"> <%= h truncate( book.description.gsub(/<.*?>/,''), :length => 50) %> </a>
+
+									</p>
+									<span class="read">..</span>
+									<a class="excluive ajax_add_to_cart_button" rel="#" title="Add to mybooks">Add to mybooks</a>
+								</div>
+							</li>
+							<% end %>
+						</ul>
+						<div class="clearblock"></div>
+					</div>
+				</div>
 			</div>
-			<div id="featured-products_block_center">
-				<div class="block_content">
-					<ul>
-						<% for book in @books[0..3] -%>
-						<li class="ajax_block_product">
-							<%= image_tag(book.image_url, :class => "product_image") %>
-							<div>
-								<h5><a class="proudct_link" href="http://localhost:3000/library/product" title="<%= h h book.title %>"><%= h h book.title %></a></h5>
+
+			<div id="col2">
+				<div id="center_tag">
+					<img src="/img/center-tag.jpg" />
+					<a href="#"> <h4> New product </h4> </a>
+				</div>
+				<div id="new-products_block_center">
+					<div class="block_content">
+						<ul>
+							<% for book in @books [4..10]-%>
+							<li class="ajax_block_product">
+								<%= image_tag(book.image_url, :class => "product_image") %>
+								<div>
+									<h5><a class="proudct_link" href="#" title="<%= h h book.title %>"><%= h h book.title %></a></h5>
+									<p>
+										<a class="proudct_descr" href="#" tabindex="More"> <%= h truncate( book.description.gsub(/<.*?>/,''), :length => 50) %> </a>
+
+									</p>
+									<span class="read">..</span>
+									<a class="excluive ajax_add_to_cart_button" rel="#" title="Add to mybooks">Add to mybooks</a>
+								</div>
+							</li>
+							<% end %>
+						</ul>
+						<div class="clearblock"></div>
+					</div>
+				</div>
+			</div>
+
+			<div id="col3">
+				<div id="center_tag">
+					<img src="/img/center-tag.jpg" />
+					<a href="#"> <h4> top 10 product </h4> </a>
+				</div>
+				<div id="new-products_block_center">
+					<div class="block_content">
+						<ul>
+							<% for book in @books [11..20] -%>
+							<li class="ajax_block_product">
+								<%= image_tag(book.image_url, :class => "product_image") %>
+								<div>
+									<h5><a class="proudct_link" href="#" title="<%= h h book.title %>"><%= h h book.title %></a></h5>
+									<p>
+										<a class="proudct_descr" href="#" tabindex="More"> <%= h truncate( book.description.gsub(/<.*?>/,''), :length => 50) %> </a>
+
+									</p>
+									<span class="read">..</span>
+									<a class="excluive ajax_add_to_cart_button" rel="#" title="Add to mybooks">Add to mybooks</a>
+								</div>
+							</li>
+							<% end %>
+						</ul>
+						<div class="clearblock"></div>
+					</div>
+				</div>
+			</div>
+
+			<div id="col4">
+				<div id="center_tag">
+					<img src="/img/center-tag.jpg" />
+					<a href="#"> <h4> New product </h4> </a>
+				</div>
+				<div id="test-products_block_center">
+					<div class="block_content">
+						<ul>
+
+							<li class="ajax_block_product">
+								<img src="/img/books/13-37-home.jpg" class="product_image"  onClick="openPopup();"/>
+								
+
+								<div id="test" class="popup_item" style=" background-color: rgba(229,229,229,0.5)" >
+									<div class="cancel" onclick="closePopup();"><img src="/img/xx.png"  width="30" height="30"/></div>
+
+							<a href="#">	<img src="/img/books/13-37-home.jpg" id="bigpic" width="200" height="300"/></a>
+								<h5><a class="proudct_link" href="#" >يوسف زيدان</a></h5>
 								<p>
-									<a class="proudct_descr" href="http://localhost:3000/library/product" tabindex="More"> <%= h truncate( book.description.gsub(/<.*?>/,''), :length => 50) %> </a>
+						
+									 في هذا الكتاب يتتبع يوسف زيدان، أهم الأفكار التي شكلت تصور اليهود والمسيحيين والمسلمي
+									ن، اللاهوت المسيحي وعلم الكلام الإسلامي، إلى رؤى لاهوتية يصعب الفصل بين مراحلها!
+									 يناقش الكتاب، ويحلل ويقارن ويتتبع، تطور الأفكار اللاهوتية على الصعيدين المسيحي والإسلامي. وذلك بغرض إدراك الروابط الخفية بين المراحل التاريخية التقليدية،
+									
 
 								</p>
-								<span class="read">..</span>
+							
 								<a class="excluive ajax_add_to_cart_button" rel="#" title="Add to mybooks">Add to mybooks</a>
-							</div>
-						</li>
-						<% end %>
+								
+					</div>
+					</li>
+
 					</ul>
+
 					<div class="clearblock"></div>
 				</div>
 			</div>
 		</div>
-		
-		
-		<div id="col2">
-			<div id="center_tag">
-				<img src="/img/center-tag.jpg" />
-		<a href="#">			<h4> New product </h4> </a>
-			</div>
-			<div id="new-products_block_center">
-				<div class="block_content">
-					<ul>
-						<% for book in @books -%>
-						<li class="ajax_block_product">
-							<%= image_tag(book.image_url, :class => "product_image") %>
-							<div>
-								<h5><a class="proudct_link" href="#" title="<%= h h book.title %>"><%= h h book.title %></a></h5>
-								<p>
-									<a class="proudct_descr" href="#" tabindex="More"> <%= h truncate( book.description.gsub(/<.*?>/,''), :length => 50) %> </a>
 
-								</p>
-								<span class="read">..</span>
-								<a class="excluive ajax_add_to_cart_button" rel="#" title="Add to mybooks">Add to mybooks</a>
-							</div>
-						</li>
-						<% end %>
-					</ul>
-					<div class="clearblock"></div>
-				</div>
-			</div>
-		</div>
-		
-		
-		<div id="col3">
-			<div id="center_tag">
-			<img src="/img/center-tag.jpg" />
-		<a href="#">			<h4> top 10 product </h4> </a>
-			</div>
-			<div id="new-products_block_center">
-				<div class="block_content">
-					<ul>
-						<% for book in @books -%>
-						<li class="ajax_block_product">
-							<%= image_tag(book.image_url, :class => "product_image") %>
-							<div>
-								<h5><a class="proudct_link" href="#" title="<%= h h book.title %>"><%= h h book.title %></a></h5>
-								<p>
-									<a class="proudct_descr" href="#" tabindex="More"> <%= h truncate( book.description.gsub(/<.*?>/,''), :length => 50) %> </a>
-
-								</p>
-								<span class="read">..</span>
-								<a class="excluive ajax_add_to_cart_button" rel="#" title="Add to mybooks">Add to mybooks</a>
-							</div>
-						</li>
-						<% end %>
-					</ul>
-					<div class="clearblock"></div>
-				</div>
-			</div>
-		</div>
-		
 	</div>
 </div>
 </div>
